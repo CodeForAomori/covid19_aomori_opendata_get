@@ -26,6 +26,7 @@ Object.keys(jsonObject2).forEach(function (key) {
     	workObj2.push(jsonObject2[key]);
     }
 });
+workObj2.shift(); //先頭データは不完全なので取り除く
 fs.writeFile('./json/_inspection.json', JSON.stringify(workObj2, null, 1), (err, data) => {
     if(err) console.log(err);
     else console.log('_inspection.json fix');
