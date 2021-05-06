@@ -9,6 +9,7 @@ csv_to_json('consult.csv','_consult.json');
 csv_to_json('consult_call_center.csv','_consult_call_center.json');
 csv_to_json('inspection.csv','_inspection.json');
 csv_to_json('patients.csv','_patients.json');
+csv_to_json('attributes.csv','_attributes.json');
 
 function csv_to_json (inputFile, outputFile) {
     genCSV().then(res => {

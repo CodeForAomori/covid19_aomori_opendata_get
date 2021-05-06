@@ -31,6 +31,10 @@ request.get({ url: url }, function (error, response, body) {
             // csv生成
             getCSV(val.url,'patients');
         } else if (val.name.match(/検査陽性者の状況/)) {
+            // 更新日時のjson作成
+            updatedToJson(val.updated,'attributes');
+            // csv生成
+            getCSV(val.url,'attributes');
         }
     });
 });
